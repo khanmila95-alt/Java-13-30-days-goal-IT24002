@@ -1,0 +1,47 @@
+Topics :Java File Handling
+//Create file
+import java.io.File;
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) {
+
+        try {
+            File file = new File("test.txt");
+
+            if(file.createNewFile()) {
+                System.out.println("File created");
+            } else {
+                System.out.println("File already exists");
+            }
+
+        } catch(IOException e) {
+            System.out.println("Error");
+        }
+    }
+}
+
+
+
+
+//Write file
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) {
+
+        try {
+            FileWriter writer = new FileWriter("test.txt");
+
+            writer.write("Hello Java File Handling");
+
+            writer.close();
+
+            System.out.println("Data written successfully");
+
+        } catch(IOException e) {
+            System.out.println("Error");
+        }
+    }
+}
