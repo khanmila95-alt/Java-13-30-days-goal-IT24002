@@ -1,0 +1,19 @@
+Topic: Student list (real world scenario)
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+
+        ArrayList<String> students = new ArrayList<>();
+
+        students.add("Mila");
+        students.add("Rahim");
+        students.add("Karim");
+
+        System.out.println("Students: " + students);
+
+        students.remove("Rahim");
+
+        System.out.println("After Remove: " + students);
+    }
+}
